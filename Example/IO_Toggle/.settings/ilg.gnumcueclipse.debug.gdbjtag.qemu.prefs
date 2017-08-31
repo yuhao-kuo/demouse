@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+executable.name=qemu-system-gnuarmeclipse
+install.folder=/opt/gnuarmeclipse/qemu/2.8.0-201703022210-head/bin

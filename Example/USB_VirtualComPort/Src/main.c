@@ -1,4 +1,5 @@
 
+#include <stdio.h>
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "usb_device.h"
@@ -7,7 +8,13 @@
 
 void SystemClock_Config(void);
 
-uint8_t mystring[] = "hello world!!\n";
+uint8_t mystring[] = "hello world!!!\n";
+
+void putch(char c)
+{
+	uint8_t *ptr = (uint8_t *)&c;
+	CDC_Transmit_FS(ptr, 1);
+}
 
 
 int main(void)
@@ -17,7 +24,7 @@ int main(void)
 
   while (1)
   {
-	  CDC_Transmit_FS(mystring, strlen((const char *)mystring));
+	  printf("%s", mystring);
 	  HAL_Delay(1000);
   }
 }
