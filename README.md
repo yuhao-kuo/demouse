@@ -21,6 +21,10 @@
 
 2. **USB_VirtualComPort** USB的虛擬序列埠範例
 
+3. **USB_VCP_Printf** 使用USB虛擬串列埠實作printf (Bata)
+
+4. **TIM_Interrutp** timer中斷範例
+
 ## 錯誤回報
 您可以使用GitHub的Issues或是Mail給我
 
